@@ -47,7 +47,7 @@ int main()
   }
   if(b==0)
   {
-
+    sinB();
   }
   bNegativo = b*-1; //Paso 1, cambiar el signo a B
   bCuadrado = pow(b, 2); //Paso 2
@@ -158,4 +158,6 @@ void sinB()
     cout <<" x1 = " <<result <<endl;
     cout <<" x2 = " <<result*-1 <<endl;
   }
+  system("PAUSE");
+  exit(0);
 }
