@@ -26,6 +26,7 @@ float x2;
 
 int raiz();
 int lectura();
+void sinB(); //Sin variable a la 1 - 0 = b
 
 int main()
 {
@@ -43,6 +44,10 @@ int main()
     {
     //No hacer nada - Do nothing
     cout <<" Se ha completado la importacion. Modo automatico" <<endl;
+  }
+  if(b==0)
+  {
+
   }
   bNegativo = b*-1; //Paso 1, cambiar el signo a B
   bCuadrado = pow(b, 2); //Paso 2
@@ -127,4 +132,30 @@ int lectura()
   importacionesC.close();
   //Hemos terminado
   return 1;
+}
+
+void sinB()
+{
+  cout <<" Partimos que la ecuacion tiene la C en el lado derecho (estructura ax^2 + c = 0)" <<endl;
+  int tempC = c*-1;
+  int tempC2 = tempC/a;
+  //Ecuación despejada
+  if(tempC2 < 0)
+  {
+    cout <<" La ecuacion no tiene solucion real" <<endl;
+    system("PAUSE");
+    exit(0);
+  }
+  int result = sqrt(tempC2); //La raíz de la parte derecha
+  if(tempC2 == 0)
+  {
+    cout <<" La ecuacion solo tiene una solucion, que es 0" <<endl;
+    system("PAUSE");
+    exit(0);
+  }
+  else{
+    cout <<" La ecuacion tiene 2 soluciones: " <<endl;
+    cout <<" x1 = " <<result <<endl;
+    cout <<" x2 = " <<result*-1 <<endl;
+  }
 }
